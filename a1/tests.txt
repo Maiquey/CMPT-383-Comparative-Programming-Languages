@@ -1,0 +1,71 @@
+{-# OPTIONS_GHC -Wall #-}
+
+pwReduce (4::Hash)
+"aaaaaaae"
+pwReduce (1742526836::Hash)
+"ebdcedcb"
+pwReduce (-1726491528::Hash)
+"aecdcdec"
+pwReduce (-439590745::Hash)
+"dbaeeaba"
+pwReduce (-1::Hash)
+"eeeeeeee"
+pwReduce (-8::Hash)
+"eeeeeedc"
+rainbowTable 0 ["acdgcddh","fcfeggeh","ebfeecbe"]
+fromList [(-397497993,"acdgcddh"),(501873960,"fcfeggeh"),(1832318221,"ebfeecbe")]
+rainbowTable 1 ["acdgcddh","fcfeggeh","ebfeecbe"]
+fromList [(-743605312,"ebfeecbe"),(-217206443,"fcfeggeh"),(689654816,"acdgcddh")]
+rainbowTable 2 ["acdgcddh","fcfeggeh","ebfeecbe"]
+fromList [(-2064295851,"fcfeggeh"),(-1060984018,"acdgcddh"),(-417807727,"ebfeecbe")]
+rainbowTable width ["acdgcddh","fcfeggeh","ebfeecbe"]
+fromList [(-1097908233,"acdgcddh"),(967401793,"fcfeggeh"),(1209123232,"ebfeecbe")]
+let table = rainbowTable width ["acdgcddh","fcfeggeh","ebfeecbe"]
+table
+fromList [(-1097908233,"acdgcddh"),(967401793,"fcfeggeh"),(1209123232,"ebfeecbe")]
+findPassword table width (19040862::Hash)
+Just "adbdcdba"
+findPassword table width (592655920::Hash)
+Nothing
+findPassword table width (967401793::Hash)
+Just "cbaebebe"
+findPassword table width (1832318221::Hash)
+Just "ebfeecbe"
+let many_collisions = rainbowTable width ["aabeadab","aacbcced","abdcdead","abeebdac","acbeaece","baaceacb","baaeceac","bbccceeb","beadeeeb","bebabebe","beccdece","cacdabbd","cdaaadca","cedaaaee","daeaadcc","dbbaecee","dbdaeded","ddaacbda","ddaddaac","ddbbccad","ddddaedb","decdbdbd","deedaedb","eaccaedb","ebbabede","edabeade","edddcecd","edeacbca","edeeebdb","eeadbeed"]
+findPassword many_collisions width (-2055206335)
+Just "dabbbcbe"
+findPassword many_collisions width (-1412968889)
+Just "baadbade"
+
+pwLength = 5
+nLetters = 18
+width = 60
+height = 800
+
+pwReduce (4::Hash)
+"aaaae"
+pwReduce (1742526836::Hash)
+"dfdei"
+pwReduce (-1726491528::Hash)
+"figia"
+pwReduce (-1::Hash)
+"rrrrr"
+rainbowTable 0 ["cifei","pcmda","dhbgd","lpnei"]
+fromList [(-1503203201,"lpnei"),(-1487366839,"cifei"),(-640214828,"pcmda"),(2079210298,"dhbgd")]
+rainbowTable 1 ["cifei","pcmda","dhbgd","lpnei"]
+fromList [(-954349282,"cifei"),(-489260427,"dhbgd"),(1393638303,"lpnei"),(1735727550,"pcmda")]
+rainbowTable 8 ["cifei","pcmda","dhbgd","lpnei"]
+fromList [(-1124643307,"lpnei"),(-302912064,"dhbgd"),(343965490,"pcmda"),(1405018158,"cifei")]
+rainbowTable width ["cifei","pcmda","dhbgd","lpnei"]
+fromList [(-1280634116,"lpnei"),(-973728692,"pcmda"),(-53714259,"cifei"),(560614378,"dhbgd")]
+let table = rainbowTable width ["aljdm","dlkhg","madnh","fcdfo","lndof"]
+table
+fromList [(-974986852,"aljdm"),(-579478432,"fcdfo"),(60687648,"madnh"),(1461195680,"lndof"),(2103023663,"dlkhg")]
+findPassword table width (-1185182264::Hash)
+Nothing
+findPassword table width (261038628::Hash)
+Just "qinmg"
+findPassword table width (60687648::Hash)
+Just "hhoid"
+findPassword table width (60687649::Hash)
+Nothing

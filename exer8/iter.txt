@@ -1,0 +1,23 @@
+1: .into_iter()
+    - moves self.
+    - returns iterator object that takes ownership of the vector, ie. original vector cannot be used after creating iterator.
+    - Given a vector of some type T, this iterator produces Produces T values.
+    - Useful in a situation where you don't need the original vector after iteration, such as printing out the final values stored in a vector.
+
+2: .iter()
+    - borrows self.
+    - returns an iterator object which iterates through the elements of the reference to the vector slice.
+    - Given a vector of some type T, this iterator produces Produces &T values.
+    - Useful for when we want to iterate through a vector's elements and do something with them but keep the original vector intact.
+
+3: .iter_mut()
+    - mutably-borrows self.
+    - returns an iterator object that allows for mutation of the vector values.
+    - Given a mutable vector of some type T, this iterator produces Produces &mut T values.
+    - Useful for when we want to iterate through a vector and modify each value, for example, double each value in a Vec<i64>.
+
+4: .drain(..)
+    - mutably-borrows self.
+    - returns an iterator object made up of the objects in the vector in the specified range. In this case with the RangeFull object, drain returns an iterator with all of the vector's elements and leaves the original vector empty.
+    - Given a vector of some type T, this iterator produces Produces T values.
+    - Useful in a situation where you want to pipe the elements of a vector into a seperate iterator, but be able to continue appending elements to the original vector.

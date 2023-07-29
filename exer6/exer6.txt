@@ -1,0 +1,89 @@
+< Language Description #1 - C++ >
+
+Indicate which version of the language you're talking about: C++11, C++17 (or Java 9, 10 etc).
+
+    - C++11
+
+Overall programming paradigm (imperative, functional, object oriented, logic programming, etc.).
+
+    - Imperative
+    - Object-oriented
+    - Procedural
+    - Functional
+    - Generic
+    - Modular
+
+Compiled, interpreted, bytecode compiled, JIT compiled (for the most common tools: either GCC or Clang).
+
+    - Compiled using GCC or Clang most commonly.
+
+Static or dynamic types. Static or dynamic binding.
+
+    - Static types.
+    - Static binding.
+
+Strong or weak typing.
+
+    - Strong typing.
+
+Manual memory management or garbage collected (and garbage collection algorithm).
+
+    - Manual memory management and allocation/deallocation.
+
+Has first-class functions? Has closures?
+
+    - supports first-class functions as well as closures.
+
+What support for concurrent/parallel programming is available?
+
+    - C++11 has built-in support for many concurrent/parallel programming features including:
+    - threads
+    - atomic operations
+    - mutexes
+    - condition variables
+    - futures (promises, async, etc.)
+
+
+< Language Description #2 - Python >
+
+Indicate which version of the language you're talking about: C++11, C++17 (or Java 9, 10 etc).
+
+    - Python 3
+
+Overall programming paradigm (imperative, functional, object oriented, logic programming, etc.).
+
+    - Imperative
+    - Procedural
+    - Functional
+    - Object-oriented
+    - Structured
+    - Reflective
+
+Compiled, interpreted, bytecode compiled, JIT compiled (for the most common tools: either GCC or Clang).
+
+    - Interpreted.
+
+Static or dynamic types. Static or dynamic binding.
+
+    - Dynamic types.
+    - Dynamic binding.
+
+Strong or weak typing.
+
+    - Strong typing.
+
+Manual memory management or garbage collected (and garbage collection algorithm).
+
+    - Python has automatic garbage collection.
+    - Uses a cycle-detection algorithm to free memory that is no longer being used by the program.
+
+Has first-class functions? Has closures?
+
+    - Supports first-class functions and closures.
+
+What support for concurrent/parallel programming is available?
+
+    - Python supports concurrent/parallel programming with 3 main libraries
+    - Multiprocessing
+    - Threading
+    - Asncio: asynchronous coroutine calls
