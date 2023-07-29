@@ -1,11 +1,5 @@
-*.pdf
 383notes.md
 403notes.md
 motel.py
+lecture-notes/*
 *.zip
-*.json
-*.csv
-*.svg
-*.html
-*.rlib
-*.d
